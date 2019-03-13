@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('stop filebeat') {
             steps {
-                sh 'sudo systemctl stop filebeat'
-                sh 'sudo systemctl status filebeat'
+               sh 'python --version'
             }
         }
         stage('Deploy') {
