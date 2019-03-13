@@ -9,7 +9,7 @@ pipeline {
         }
         stage('update filebeat') {
             steps {
-                sh 'sudo yum update filebeat'
+                sh 'sudo yum update -y filebeat'
             }
         }
     }
