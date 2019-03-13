@@ -2,14 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('stop filebeat') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+                sh 'systemctl stop filebeat'
+                sh 'systemctl status filebeat'
             }
         }
         stage('Deploy') {
